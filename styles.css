@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
+
+html {
+    width: 100%;
+    font-size: 16px;
+    scroll-behavior: smooth; 
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 2rem;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(128, 128, 128, 0.5);
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.africaunite {
+    font-family: "Cedarville Cursive", "Jost", sans-serif;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;;
+}
+
+.action_btn {
+    background-color: black;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale .2s ease;
+    font-family: "Jost", sans-serif;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+/* DROPDOWN MENU */
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: white;
+    backdrop-filter: blur(15px); 
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-top: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .toggle_btn {
+    display: block;
+}
+
+.toggle_btn i {
+    color: #000;
+}
+
+.dropdown_menu {
+    display: block;
+}
+
+/* WELCOME SECTION */
+
+.welcome-section,
+.welcome-section-2 {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.welcome-section h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.welcome-section p {
+    font-family: serif;
+}
+
+.welcome-section p,
+.welcome-section-2 p {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.welcome-section-2 p {
+    font-family: serif;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+
+}
+
+/* PRODUCTS IMAGES */
+
+.products {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    gap: 40px;
+    padding: 20px 0;
+    margin-top: 15px;
+}
+
+.product {
+    width: 300px;
+    height: 400px;
+    max-width: 300px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all .35s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    cursor: grab;
+}
+
+/* Order Form */
+
+.orderSection {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    background-size: cover;
+    padding: 50px 0;
+}
+
+.orderSection h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#orderForm {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 50px;
+    width: 75%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-family: "Jost", sans-serif;
+}
+
+#orderForm input, textarea {
+    width: 90%;
+    height: 60px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: black;
+}
+
+textarea {
+    resize: none;
+    overflow: hidden;
+}
+
+#orderBtn {
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 3px;
+    width: 40%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .35s ease;
+}
+
+#orderBtn:hover {
+    scale: 1.1;
+}
+
+.br1 {
+    border-radius: 50px 0 50px 0;
+}
+.br2 {
+    border-radius: 0 50px 0 50px;
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+}

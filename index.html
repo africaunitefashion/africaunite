@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Africa Unite</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Eccomerce, Clothing, Shirts, Trousers, Hats">
+        <meta name="description" content="Africa Unite is a clothing brand based in Eastern Cape South Africa">
+        <link rel="stylesheet" href="styles.css">
+        <!-- FONT AWESOME ICONS LINK -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        <!-- NAVIGATION -->
+        <header>
+            <div class="navbar">
+                <div class="logo"><a class="africaunite" href="index.html">AfricaUnite</a></div>
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#orderForm">Order</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <a href="#" class="action_btn">Follow Us</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#orderForm">Order</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="action_btn">Get Started</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <section class="welcome-section">
+                <h1>Welcome To AficaUnite</h1>
+                <p>Grow Better Together</p>
+            </section>
+
+            <div class="products">
+                <img src="images/1.jpg" class="product">
+                <img src="images/5.jpg" class="product">
+                <img src="images/6.jpg" class="product">
+                <img src="images/7.jpg" class="product">
+                <img src="images/2.jpg" class="product">
+                <img src="images/10.jpg" class="product">
+            </div>
+
+           <section class="welcome-section-2"  id="products">
+                <p>Our designs blend modern fashion with authentic African influences</p>
+           </section>
+
+        <div class="products">
+            <img src="images/11.jpg" class="product br1">
+            <img src="images/3.jpg" class="product">
+            <img src="images/4.jpg" class="product br2">
+            <img src="images/9.jpg" class="product">
+            <img src="images/8.jpg" class="product">
+            <img src="images/13.jpg" class="product">
+        </div>
+
+        
+        <section class="orderSection" id="orderSection">
+            <h1>Place Your Order</h1>
+            <form action="" method="" id="orderForm">
+                <input required  type="text" name="Name" id="name" placeholder="Name"/>
+                <input required type="text" name="Surname" id="surname" placeholder="Surname"/>
+                <input required type="tel" name="telephone" id="telephone" placeholder="Phone Number"/>
+                <textarea required name="order" id="order" placeholder="Order"></textarea>
+                <button type="button" id="orderBtn" onclick="sendToWhatsApp()">Order</button>
+            </form>
+       </section>
+          
+        </main>
+
+        <footer id="contact">
+            <a href="https://www.instagram.com/africaunite54/" target="_blank">Follow Us On Instagram</a>
+            <i class="fa-brands fa-instagram"></i>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
