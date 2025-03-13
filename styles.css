@@ -171,6 +171,7 @@ header {
 
 .welcome-section-2 p {
     font-family: serif;
+    font-size: 14px !important;
 }
 
 /* RESPONSIVE DESIGN */
