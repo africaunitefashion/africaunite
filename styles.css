@@ -171,7 +171,7 @@ header {
 
 .welcome-section-2 p {
     font-family: serif;
-    font-size: 14px !important;
+    scale: 0.7 !important;
 }
 
 /* RESPONSIVE DESIGN */
