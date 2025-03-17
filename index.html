@@ -18,10 +18,6 @@
 
     <body>
         <header>
-            <button class="cart-btn" onclick="openCart()">
-                <img src="images/cart.png" alt="Cart">
-            </button>
-            
             <div id="cartSidebar" class="cart-sidebar">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a>
                 <h2>Your Cart</h2>
@@ -29,28 +25,36 @@
                 <p id="cartTotal">Total: R0.00</p>
                 <button class="checkout-btn">Checkout</button>
             </div>
+
             <div class="navbar">
                 <div class="logo"><a class="africaunite" href="index.html">AfricaUnite</a></div>
+
+                <button class="cart-btn" onclick="openCart()">
+                    <img src="images/cart.png" alt="Cart">
+                </button>
+
                 <ul class="links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#orderForm">Order</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#shirts">T-Shirts</a></li>
+                    <li><a href="#caps">Caps</a></li>
+                    <li><a onclick="openCart()">Cart</a></li>
                 </ul>
-                <a href="#contact" class="action_btn">Follow Us</a>
+                <a href="https://www.instagram.com/africaunite54/" target="_blank" class="action_btn">Follow Us</a>
                 <div class="toggle_btn">
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
+
             <div class="dropdown_menu">
                 <ul class="links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#orderForm">Order</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#contact" class="action_btn">Follow</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#shirts">T-Shirts</a></li>
+                    <li><a href="#caps">Caps</a></li>
+                    <li><a href="">Cart</a></li>
+                    <li><a href="https://www.instagram.com/africaunite54/" class="action_btn">Follow</a></li>
                 </ul>
             </div>
+
         </header>
 
         <main>
@@ -59,7 +63,7 @@
                 <p>Grow Better Together</p>
             </section>
 
-            <div class="products shirts">
+            <div class="products shirts" id="shirts">
                 
                 <h1>T-Shirts</h1>
 
@@ -105,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="products caps">
+            <div class="products caps" id="caps">
                 <h1>Caps</h1>
                 <div class="product-item">
                     <img src="images/9.jpg" class="product">
