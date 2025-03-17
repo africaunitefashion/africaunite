@@ -321,13 +321,6 @@ header {
     flex-direction: column;
 }
 
-.add-to-cart {
-    position: absolute !important;
-    top: 20px !important;
-    right: 20px !important;
-    background-color: white;
-}
-
 .product {
     width: 300px;
     height: 400px;
