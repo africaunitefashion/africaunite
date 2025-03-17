@@ -114,33 +114,12 @@ function addToCart(productName, productPrice, productImage) {
 
 function showAddToCartNotification() {
     let notification = document.getElementById("cartNotification");
-    if (!notification) {
-        notification = document.createElement("div");
-        notification.id = "cartNotification";
-        notification.style.position = "fixed";
-        notification.style.bottom = "20px";
-        notification.style.left = "50%";
-        notification.style.transform = "translateX(-50%)";
-        notification.style.backgroundColor = "black";
-        notification.style.color = "white";
-        notification.style.padding = "10px 20px";
-        notification.style.fontSize = "16px";
-        notification.style.textAlign = "center";
-        notification.style.width = "auto";
-        notification.style.zIndex = "1000";
-        notification.style.opacity = "1";
-        notification.style.transition = "opacity 0.5s ease-in-out";
-        document.body.appendChild(notification);
-    }
-
-    notification.innerText = "Added to cart";
-    notification.style.opacity = "1";
+    notification.style.opacity = "1";  // Show notification
     
     setTimeout(() => {
-        notification.style.opacity = "0";
+        notification.style.opacity = "0"; // Hide after 2 seconds
     }, 2000);
 }
-
 
 function removeFromCart(button) {
     const item = button.parentElement;
