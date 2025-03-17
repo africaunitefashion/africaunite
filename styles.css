@@ -322,9 +322,9 @@ header {
 }
 
 .add-to-cart {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
     background-color: white;
 }
 
