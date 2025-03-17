@@ -335,6 +335,7 @@ header {
 
 .add-to-cart {
     display: block;
+    margin-top: 20px;
 }
 
 .price {
