@@ -19,4 +19,15 @@ function sendToWhatsApp() {
     var url = "https://wa.me/" + ownerPhone + "?text=" + encodeURIComponent("Name: " + name + "\nSurname: " + surname + "\nUser Phone: " + telephone + "\nOrder: " + order);
     window.open(url, '_blank').focus();
   }
-  
+
+window.addEventListener('DOMContentLoaded', function () {
+    const prices = document.querySelectorAll('.price');
+
+    prices.forEach(price => {
+        if (price.classList.contains('shirt-price')) {
+            price.textContent = 'T-Shirt • R399'; 
+        } else if (price.classList.contains('cap-price')) {
+            price.textContent = 'Cap • R299'; 
+        }
+    });
+});
