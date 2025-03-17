@@ -137,6 +137,7 @@ header {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    
 }
 
 .cart-btn img {
@@ -190,7 +191,20 @@ header {
     margin-right: 40px;
     border-radius: 10%;
     border: 3px solid black;
-    
+    font-weight: bold; 
+    text-align: right;
+}
+
+.add-to-cart button {
+    background-color: white; 
+    color: black;
+    padding: 1px 5px; 
+    border-radius: 5px; 
+    border: 3px solid black; 
+    cursor: pointer;
+    font-weight: bold; 
+    margin-bottom: 30px;
+    margin-top:10px;
 }
 
 
@@ -221,6 +235,7 @@ header {
 .product-actions .quantity-input {
     margin-left: 20px;
 }*/
+
 .checkout-btn {
     display: block;
     width: 80%;
