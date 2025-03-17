@@ -64,3 +64,26 @@ function sendToWhatsApp() {
         }
     });
 });
+
+window.addEventListener('DOMContentLoaded', function () {
+    const prices = document.querySelectorAll('.price');
+
+    prices.forEach(price => {
+        let color = '';
+
+        if (price.classList.contains('brown')) {
+            color = 'Brown • ';
+        } else if (price.classList.contains('black')) {
+            color = 'Black • ';
+        } else if (price.classList.contains('dark-brown')) {
+            color = 'Dark Brown • ';
+        }
+
+        if (price.classList.contains('shirt-price')) {
+            price.textContent = `${color}T-Shirt • R399`; 
+        } else if (price.classList.contains('cap-price')) {
+            price.textContent = `${color}Cap • R299`; 
+        }
+    });
+});
+
