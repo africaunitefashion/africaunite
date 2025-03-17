@@ -18,6 +18,17 @@
 
     <body>
         <header>
+            <button class="cart-btn" onclick="openCart()">
+                <img src="images/bag.png" alt="Cart">
+            </button>
+            
+            <div id="cartSidebar" class="cart-sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a>
+                <h2>Your Cart</h2>
+                <div id="cartItems"></div>
+                <p id="cartTotal">Total: R0.00</p>
+                <button class="checkout-btn">Checkout</button>
+            </div>
             <div class="navbar">
                 <div class="logo"><a class="africaunite" href="index.html">AfricaUnite</a></div>
                 <ul class="links">
@@ -49,12 +60,18 @@
             </section>
 
             <div class="products shirts">
+                
                 <h1>T-Shirts</h1>
                 <div class="product-item">
                     <img src="images/1.jpg" class="product">
-                    <p class="price shirt-price brown">Shirt - R333</p>
-                </div>
-                <div class="product-item">
+                    <p class="price shirt-price brown">Shirt - R399</p>
+                  <!--  <div class="product-actions"></div> -->
+                        <button onclick="addToCart('Shirt', 'R399', 'images/1.jpg')">Add to Cart</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                  </div>
+                
+                
+                  <div class="product-item">
                     <img src="images/5.jpg" class="product">
                     <p class="price shirt-price brown"></p>
                 </div>
@@ -115,7 +132,7 @@
                     <p class="price cap-price black"></p>
                 </div>
             </div>
-
+            
             <section class="orderSection" id="orderSection">
                 <h1>Place Your Order</h1>
                 <form action="" method="" id="orderForm">

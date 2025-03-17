@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Navigation Bar*/
 * {
     margin: 0;
     padding: 0;
@@ -125,6 +128,110 @@ header {
     justify-content: center;
 }
 
+/*Cart Sidebar*/
+
+.cart-btn {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+.cart-sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+}
+
+.cart-sidebar .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.cart-sidebar h2 {
+    padding: 10px;
+    text-align: center;
+}
+
+#cartItems {
+    padding: 20px;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-image {
+    width: 50px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.quantity-input {
+    width: 40px;
+    margin-right: 40px;
+    border-radius: 10%;
+    border: 3px solid black;
+    
+}
+
+
+#cartTotal {
+    text-align: right;
+    padding-right: 20px; 
+    font-weight: bold;
+    margin-top: 20px;
+}
+.remove-btn {
+    background-color: red;
+    color: white;
+    border-radius: 10%;
+    border: 1px solid red;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all .35s ease;
+}
+
+
+/*.product-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;  
+}
+
+.product-actions .quantity-input {
+    margin-left: 20px;
+}*/
+.checkout-btn {
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
 .navbar .toggle_btn {
     display: block;
 }
@@ -132,6 +239,8 @@ header {
 .toggle_btn i {
     color: #000;
 }
+
+/*Welcome Section*/
 
 .welcome-section,
 .welcome-section-2 {
@@ -179,7 +288,7 @@ header {
         width: unset;
     }
 }
-
+/*Products Section*/
 .products {
     width: 100vw;
     display: flex;
@@ -233,6 +342,8 @@ header {
     padding: 5px 10px;
     border-radius: 5px;
 }
+
+/*Order Section*/
 
 .orderSection {
     width: 100%;
