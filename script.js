@@ -19,8 +19,8 @@ function sendToWhatsApp() {
     var url = "https://wa.me/" + ownerPhone + "?text=" + encodeURIComponent("Name: " + name + "\nSurname: " + surname + "\nUser Phone: " + telephone + "\nOrder: " + order);
     window.open(url, '_blank').focus();
   }
-
-window.addEventListener('DOMContentLoaded', function () {
+  
+  window.addEventListener('DOMContentLoaded', function () {
     const prices = document.querySelectorAll('.price');
 
     prices.forEach(price => {
