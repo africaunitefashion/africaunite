@@ -107,9 +107,9 @@ function addToCart(productName, productPrice, productImage) {
         <button class="remove-btn" onclick="removeFromCart(this)">Remove</button>
     `;
     cartItems.appendChild(item);
+    alert("Added To Cart");
     updateTotal();
     closeSizeOptions();
-    alert("Added to cart");
 }
 
 
