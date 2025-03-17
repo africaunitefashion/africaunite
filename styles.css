@@ -333,6 +333,10 @@ header {
     cursor: grab;
 }
 
+.add-to-cart {
+    display: block;
+}
+
 .price {
     position: absolute;
     bottom: 10px;
