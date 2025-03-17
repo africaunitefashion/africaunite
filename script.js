@@ -112,7 +112,25 @@ function addToCart(productName, productPrice, productImage) {
 }
 
 function AddedToCart() {
-    alert("Item added to the cart!");
+    const modal = document.createElement('div');
+    modal.classList.add('modal');  
+    modal.innerText = "Added To Cart";
+    document.body.appendChild(modal);
+    modal.style.position = 'fixed';
+    modal.style.bottom = '20px';
+    modal.style.left = '50%';
+    modal.style.transform = 'translateX(-50%)';
+    modal.style.backgroundColor = 'black';
+    modal.style.color = 'white';
+    modal.style.padding = '20px';
+    modal.style.fontSize = '16px';
+    modal.style.textAlign = 'center';
+    modal.style.zIndex = '1000'; 
+    modal.style.display = 'block';
+    setTimeout(function() {
+        modal.style.display = 'none';
+        modal.remove();
+    }, 2000);
 }
 
 
