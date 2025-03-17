@@ -111,6 +111,10 @@ function addToCart(productName, productPrice, productImage) {
     closeSizeOptions();
 }
 
+function AddedToCart() {
+    alert("Item added to the cart!");
+}
+
 
 function removeFromCart(button) {
     const item = button.parentElement;
