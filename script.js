@@ -103,23 +103,15 @@ function addToCart(productName, productPrice, productImage) {
     item.innerHTML = `
     <img src="${productImage}" alt="${productName}" class="cart-item-image">
         <p>${productName} - ${productPrice} </p> 
-         <input type="number" class="quantity-input" value="1" min="1" onchange="updateTotal()">
+        <input type="number" class="quantity-input" value="1" min="1" onchange="updateTotal()">
         <button class="remove-btn" onclick="removeFromCart(this)">Remove</button>
-        `;
+    `;
     cartItems.appendChild(item);
     updateTotal();
     closeSizeOptions();
-    showAddToCartNotification();
+    alert("Added to cart");
 }
 
-function showAddToCartNotification() {
-    let notification = document.getElementById("cartNotification");
-    notification.style.opacity = "1";  // Show notification
-    
-    setTimeout(() => {
-        notification.style.opacity = "0"; // Hide after 2 seconds
-    }, 2000);
-}
 
 function removeFromCart(button) {
     const item = button.parentElement;
