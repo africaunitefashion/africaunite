@@ -108,7 +108,7 @@ function addToCart(productName, productPrice, productImage) {
     `;
     cartItems.appendChild(item);
     updateTotal();
-    closeSizeOptions();
+    //closeSizeOptions();
 }
 
 function AddedToCart() {
