@@ -317,6 +317,8 @@ header {
 
 .product-item {
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .product {
