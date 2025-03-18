@@ -29,9 +29,6 @@
             <div class="navbar">
                 <div class="logo"><a class="africaunite" href="index.html">AfricaUnite</a></div>
 
-                <button class="cart-btn" onclick="openCart()">
-                    <img src="images/cart.png" alt="Cart">
-                </button>
 
                 <ul class="links">
                     <li><a href="#">About</a></li>
@@ -39,12 +36,18 @@
                     <li><a href="#caps">Caps</a></li>
                     <li><a onclick="openCart()">Cart</a></li>
                 </ul>
+               
+
                 <a href="https://www.instagram.com/africaunite54/" target="_blank" class="action_btn">Follow Us</a>
                 <div class="toggle_btn">
                     <i class="fa-solid fa-bars"></i>
-                </div>
-            </div>
+                </div> 
 
+           </div>
+           <button class="cart-btn" onclick="openCart()" onclick="closeCart()">
+            <img src="images/cart.png" alt="Cart">
+        </button> 
+            
             <div class="dropdown_menu">
                 <ul class="links">
                     <li><a href="#">About</a></li>
@@ -85,30 +88,51 @@
                 <div class="product-item">
                     <img src="images/6.jpg" class="product">
                     <p class="price shirt-price black"></p>
+                    <div class="add-to-cart">
+                        <button onclick="addToCart('Shirt', 'R399', 'images/6.jpg'); AddedToCart()">Add To Cart</button>
+                </div>
                 </div>
                 <div class="product-item">
                     <img src="images/7.jpg" class="product">
                     <p class="price shirt-price brown"></p>
+                    <div class="add-to-cart">
+                        <button onclick="addToCart('Shirt', 'R399', 'images/7.jpg'); AddedToCart()">Add To Cart</button>
+                </div>
                 </div>
                 <div class="product-item">
                     <img src="images/2.jpg" class="product">
                     <p class="price shirt-price brown"></p>
+                    <div class="add-to-cart">
+                        <button onclick="addToCart('Shirt', 'R399', 'images/2.jpg'); AddedToCart()">Add To Cart</button>
+                </div>        
                 </div>
                 <div class="product-item">
                     <img src="images/10.jpg" class="product">
                     <p class="price shirt-price brown"></p>
+                    <div class="add-to-cart">
+                        <button onclick="addToCart('Shirt', 'R399', 'images/10.jpg'); AddedToCart()">Add To Cart</button>
+                </div>
                 </div>
                 <div class="product-item">
                     <img src="images/3.jpg" class="product">
                     <p class="price shirt-price black"></p>
+                    <div class="add-to-cart">
+                        <button onclick="addToCart('Shirt', 'R399', 'images/3.jpg'); AddedToCart()">Add To Cart</button>
+                </div>
                 </div>
                 <div class="product-item">
                     <img src="images/4.jpg" class="product">
                     <p class="price shirt-price black"></p>
+                    <div class="add-to-cart">
+                        <button onclick="addToCart('Shirt', 'R399', 'images/4.jpg'); AddedToCart()">Add To Cart</button>
+                </div>
                 </div>
                 <div class="product-item">
                     <img src="images/14.jpg" class="product">
                     <p class="price shirt-price black"></p>
+                    <div class="add-to-cart">
+                        <button onclick="addToCart('Shirt', 'R399', 'images/14.jpg'); AddedToCart()">Add To Cart</button>
+                </div>
                 </div>
             </div>
 
@@ -117,26 +141,44 @@
                 <div class="product-item">
                     <img src="images/9.jpg" class="product">
                     <p class="price cap-price brown"></p>
+                    <div class="add-to-cart">
+                        <button onclick="addToCart('Cap', 'R299', 'images/9.jpg'); AddedToCart()">Add To Cart</button>
+                    </div>
                 </div>
                 <div class="product-item">
                     <img src="images/8.jpg" class="product">
                     <p class="price cap-price dark-brown"></p>
+                    <div class="add-to-cart">
+                        <button onclick="addToCart('Cap', 'R299', 'images/8.jpg'); AddedToCart()">Add To Cart</button>
+                </div>
                 </div>
                 <div class="product-item">
                     <img src="images/13.jpg" class="product">
                     <p class="price cap-price dark-brown"></p>
+                    <div class="add-to-cart">
+                        <button onclick="addToCart('Cap', 'R299', 'images/13.jpg'); AddedToCart()">Add To Cart</button>
+                </div>
                 </div>
                 <div class="product-item">
                     <img src="images/11.jpg" class="product">
                     <p class="price cap-price black"></p>
+                    <div class="add-to-cart">
+                        <button onclick="addToCart('Cap', 'R299', 'images/11.jpg'); AddedToCart()">Add To Cart</button>
+                </div>
                 </div>
                 <div class="product-item">
                     <img src="images/15.jpg" class="product">
                     <p class="price cap-price black"></p>
+                    <div class="add-to-cart">
+                        <button onclick="addToCart('Cap', 'R299', 'images/15.jpg'); AddedToCart()">Add To Cart</button>
+                </div>
                 </div>
                 <div class="product-item">
                     <img src="images/16.jpg" class="product">
                     <p class="price cap-price black"></p>
+                    <div class="add-to-cart">
+                        <button onclick="addToCart('Cap', 'R299', 'images/16.jpg'); AddedToCart()">Add To Cart</button>
+                </div>
                 </div>
             </div>
             

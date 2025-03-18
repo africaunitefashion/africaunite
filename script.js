@@ -103,7 +103,7 @@ function addToCart(productName, productPrice, productImage) {
     `;
     cartItems.appendChild(item);
     updateTotal();
-    //closeSizeOptions();
+    
 }
 
 function AddedToCart() {
