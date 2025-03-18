@@ -89,22 +89,49 @@ function openCart() {
 function closeCart() {
     document.getElementById("cartSidebar").style.width = "0";
 }
+let cartOpen = false; 
 
+function toggleCart() {
+    const cartSidebar = document.getElementById('cartSidebar');
+    if (cartOpen) {
+        cartSidebar.style.display = 'none'; // Hide cart
+    } else {
+        cartSidebar.style.display = 'block'; // Show cart
+    }
+    cartOpen = !cartOpen; // Toggle the state
+}
 
-function addToCart(productName, productPrice, productImage) {
-    const cartItems = document.getElementById("cartItems");
-    const item = document.createElement("div");
+document.querySelector('.cart-btn').addEventListener('click', toggleCart);
+document.querySelector('.closebtn').addEventListener('click', toggleCart);
+
+function addToCart(productName, productPrice, productImage, productSize) {
+    let cartItems = document.getElementById("cartItems");
+    let item = document.createElement("div");
     item.className = "cart-item";
     item.innerHTML = `
     <img src="${productImage}" alt="${productName}" class="cart-item-image">
-        <p>${productName} - ${productPrice} </p> 
-        <input type="number" class="quantity-input" value="1" min="1" onchange="updateTotal()">
+        <p>${productName} - ${productPrice} -${productSize}</p> 
+        <input type="number" class="quantity-input" value="1" min="1" max="5" onchange="updateTotal()">
         <button class="remove-btn" onclick="removeFromCart(this)">Remove</button>
     `;
     cartItems.appendChild(item);
     updateTotal();
-    
+    document.querySelectorAll('.size-options').forEach(option => option.style.display = 'none');
 }
+function showSizeOptions(button, name, price, image) {
+    let sizeOptions = button.nextElementSibling;
+    sizeOptions.style.display = 'block';
+
+    const sizes = ['XS', 'S', 'M', 'L', 'XL'];
+    let sizeButtonsHTML = '<p>Select a size:</p>';
+    sizes.forEach(size => {
+        sizeButtonsHTML += `<button onclick="addToCart('${name}', '${price}', '${image}', '${size}'); AddedToCart()">${size}</button>`;
+    });
+
+    
+    sizeOptions.innerHTML = sizeButtonsHTML;
+}
+
 
 function AddedToCart() {
     const modal = document.createElement('div');
@@ -127,6 +154,63 @@ function AddedToCart() {
         modal.remove();
     }, 2000);
 }
+function openCheckoutModal() {
+    const cartItems = document.querySelectorAll('.cart-item');
+    if (cartItems.length === 0) {
+        alert("Your cart is empty! Add items to your cart before proceeding to checkout.");
+        return;
+    }
+
+   
+    document.getElementById('checkoutModal').style.display = 'flex';
+}
+
+function closeCheckoutModal() {
+    document.getElementById('checkoutModal').style.display = 'none';
+}
+
+function sendOrder() {
+    const name = document.getElementById("customerName").value;
+    const email = document.getElementById("customerEmail").value;
+    const phone = document.getElementById("customerPhone").value;
+
+    if (!name || !phone) {
+        alert("Please provide your name and phone number.");
+        return;
+    }
+
+    // Get the cart items and format them for WhatsApp message
+    const cartItems = document.querySelectorAll('.cart-item');
+    let orderDetails = `Customer Name: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nOrder:\n`;
+
+    cartItems.forEach(item => {
+        const productName = item.querySelector('p').textContent.split(' - ')[0];
+        const productPrice = item.querySelector('p').textContent.split(' - ')[1];
+        const productSize = item.querySelector('p').textContent.split(' - ')[2];
+        const quantity = item.querySelector('.quantity-input').value;
+        orderDetails += `${productName} (${productSize}) - ${productPrice} x${quantity}\n`;
+    });
+
+    // Send the order details to WhatsApp
+    const ownerPhone = "27605505969"; // Your WhatsApp number
+    const url = `https://wa.me/${ownerPhone}?text=${encodeURIComponent(orderDetails)}`;
+    window.open(url, '_blank').focus();
+
+    clearCart();
+
+    closeCheckoutModal();
+}
+
+function clearCart() {
+    const cartItems = document.getElementById('cartItems');
+    cartItems.innerHTML = ''; // Remove all items from the cart
+
+    // Update total to 0 after clearing the cart
+    updateTotal();
+}
+
+document.querySelector('.checkout-btn').addEventListener('click', openCheckoutModal);
+
 
 
 function removeFromCart(button) {

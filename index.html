@@ -23,7 +23,7 @@
                 <h2>Your Cart</h2>
                 <div id="cartItems"></div>
                 <p id="cartTotal">Total: R0.00</p>
-                <button class="checkout-btn">Checkout</button>
+                <button class="checkout-btn" >Checkout</button>
             </div>
 
             <div class="navbar">
@@ -67,14 +67,16 @@
             </section>
 
             <div class="products shirts" id="shirts">
-                
                 <h1>T-Shirts</h1>
 
                 <div class="product-item">
                     <img src="images/1.jpg" class="product">
                     <p class="price shirt-price brown">Shirt - R399</p>
                     <div class="add-to-cart">
-                        <button onclick="addToCart('Shirt', 'R399', 'images/1.jpg'); AddedToCart()">Add To Cart</button>
+                        <button onclick="showSizeOptions(this, 'Shirt', 'R399', 'images/1.jpg')">Add To Cart</button>
+                        <div class="size-options" style="display: none; color: white;">
+                            <p>Select a size:</p>
+                        </div>
                     </div>
                 </div>
 
@@ -82,56 +84,80 @@
                     <img src="images/5.jpg" class="product">
                     <p class="price shirt-price brown"></p>
                     <div class="add-to-cart">
-                        <button onclick="addToCart('Shirt', 'R399', 'images/5.jpg'); AddedToCart()">Add To Cart</button>
+                        <button onclick="showSizeOptions(this, 'Shirt', 'R399', 'images/5.jpg')">Add To Cart</button>
+                        <div class="size-options" style="display: none; color: white;">
+                            <p>Select a size:</p>
+                        </div>
                     </div>
                 </div>
                 <div class="product-item">
                     <img src="images/6.jpg" class="product">
                     <p class="price shirt-price black"></p>
                     <div class="add-to-cart">
-                        <button onclick="addToCart('Shirt', 'R399', 'images/6.jpg'); AddedToCart()">Add To Cart</button>
+                        <button onclick="showSizeOptions(this, 'Shirt', 'R399', 'images/6.jpg')">Add To Cart</button>
+                        <div class="size-options" style="display: none; color: white;">
+                            <p>Select a size:</p>
+                        </div>
                 </div>
                 </div>
                 <div class="product-item">
                     <img src="images/7.jpg" class="product">
                     <p class="price shirt-price brown"></p>
                     <div class="add-to-cart">
-                        <button onclick="addToCart('Shirt', 'R399', 'images/7.jpg'); AddedToCart()">Add To Cart</button>
+                        <button onclick="showSizeOptions(this, 'Shirt', 'R399', 'images/7.jpg')">Add To Cart</button>
+                        <div class="size-options" style="display: none; color: white;">
+                            <p>Select a size:</p>
+                        </div>
                 </div>
                 </div>
                 <div class="product-item">
                     <img src="images/2.jpg" class="product">
                     <p class="price shirt-price brown"></p>
                     <div class="add-to-cart">
-                        <button onclick="addToCart('Shirt', 'R399', 'images/2.jpg'); AddedToCart()">Add To Cart</button>
+                        <button onclick="showSizeOptions(this, 'Shirt', 'R399', 'images/2.jpg')">Add To Cart</button>
+                        <div class="size-options" style="display: none; color: white;">
+                            <p>Select a size:</p>
+                        </div>
                 </div>        
                 </div>
                 <div class="product-item">
                     <img src="images/10.jpg" class="product">
                     <p class="price shirt-price brown"></p>
                     <div class="add-to-cart">
-                        <button onclick="addToCart('Shirt', 'R399', 'images/10.jpg'); AddedToCart()">Add To Cart</button>
+                        <button onclick="showSizeOptions(this, 'Shirt', 'R399', 'images/10.jpg')">Add To Cart</button>
+                        <div class="size-options" style="display: none; color: white;">
+                            <p>Select a size:</p>
+                        </div>
                 </div>
                 </div>
                 <div class="product-item">
                     <img src="images/3.jpg" class="product">
                     <p class="price shirt-price black"></p>
                     <div class="add-to-cart">
-                        <button onclick="addToCart('Shirt', 'R399', 'images/3.jpg'); AddedToCart()">Add To Cart</button>
+                        <button onclick="showSizeOptions(this, 'Shirt', 'R399', 'images/3.jpg')">Add To Cart</button>
+                        <div class="size-options" style="display: none; color: white;">
+                            <p>Select a size:</p>
+                        </div>
                 </div>
                 </div>
                 <div class="product-item">
                     <img src="images/4.jpg" class="product">
                     <p class="price shirt-price black"></p>
                     <div class="add-to-cart">
-                        <button onclick="addToCart('Shirt', 'R399', 'images/4.jpg'); AddedToCart()">Add To Cart</button>
+                        <button onclick="showSizeOptions(this, 'Shirt', 'R399', 'images/4.jpg')">Add To Cart</button>
+                        <div class="size-options" style="display: none; color: white;">
+                            <p>Select a size:</p>
+                        </div>
                 </div>
                 </div>
                 <div class="product-item">
                     <img src="images/14.jpg" class="product">
                     <p class="price shirt-price black"></p>
                     <div class="add-to-cart">
-                        <button onclick="addToCart('Shirt', 'R399', 'images/14.jpg'); AddedToCart()">Add To Cart</button>
+                        <button onclick="showSizeOptions(this, 'Shirt', 'R399', 'images/14.jpg')">Add To Cart</button>
+                        <div class="size-options" style="display: none; color: white;">
+                            <p>Select a size:</p>
+                        </div>
                 </div>
                 </div>
             </div>
@@ -143,6 +169,7 @@
                     <p class="price cap-price brown"></p>
                     <div class="add-to-cart">
                         <button onclick="addToCart('Cap', 'R299', 'images/9.jpg'); AddedToCart()">Add To Cart</button>
+                        
                     </div>
                 </div>
                 <div class="product-item">
@@ -181,7 +208,16 @@
                 </div>
                 </div>
             </div>
-            
+            <div id="checkoutModal" class="checkout-modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeCheckoutModal()">&times;</span>
+                    <h2>Enter your details</h2>
+                    <input type="text" id="customerName" placeholder="Your Name" required>
+                    <input type="email" id="customerEmail" placeholder="Your Email (optional)">
+                    <input type="tel" id="customerPhone" placeholder="Your Phone Number" required>
+                    <button class="send-order-btn" onclick="sendOrder()">Send Order</button>
+                </div>
+            </div>   
             <section class="orderSection" id="orderSection">
                 <h1>Place Your Order</h1>
                 <form action="" method="" id="orderForm">
