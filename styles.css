@@ -215,7 +215,7 @@ header {
     margin-top: 5px;
 }
 .size-options button {
-    margin: 3px;
+    margin: 3px 5px;
     padding: 5px 10px;
     border: none;
     cursor: pointer;
