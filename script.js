@@ -25,16 +25,6 @@ document.querySelectorAll('.dropdown_menu a').forEach(link => {
         toggleBtnIcon.classList = 'fa-solid fa-bars'; // Reset to menu icon
     });
 });
-
-function sendToWhatsApp() {
-    var name = document.getElementById("name").value;
-    var surname = document.getElementById("surname").value;
-    var telephone = document.getElementById("telephone").value;
-    var order = document.getElementById("order").value;
-    var ownerPhone = "27605505969"; // BABALO
-    var url = "https://wa.me/" + ownerPhone + "?text=" + encodeURIComponent("Name: " + name + "\nSurname: " + surname + "\nUser Phone: " + telephone + "\nOrder: " + order);
-    window.open(url, '_blank').focus();
-  }
   
   window.addEventListener('DOMContentLoaded', function () {
     const prices = document.querySelectorAll('.price');
@@ -116,7 +106,7 @@ function addToCart(productName, productPrice, productImage, productSize) {
     `;
     cartItems.appendChild(item);
     updateTotal();
-    document.querySelectorAll('.size-options').forEach(option => option.style.display = 'none');
+    document.querySelectorAll('.size-options').forEach(option => option.style.display = '0');
 }
 function showSizeOptions(button, name, price, image) {
     let sizeOptions = button.nextElementSibling;
@@ -181,14 +171,27 @@ function sendOrder() {
 
     // Get the cart items and format them for WhatsApp message
     const cartItems = document.querySelectorAll('.cart-item');
+    if (cartItems.length === 0) {
+        alert("Your cart is empty! Add items to your cart before proceeding to checkout.");
+        return;
+    }
     let orderDetails = `Customer Name: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nOrder:\n`;
 
     cartItems.forEach(item => {
-        const productName = item.querySelector('p').textContent.split(' - ')[0];
-        const productPrice = item.querySelector('p').textContent.split(' - ')[1];
-        const productSize = item.querySelector('p').textContent.split(' - ')[2];
+        const productText = item.querySelector('p').textContent;
+        const productDetails = productText.split(' - ');
+
+        const productName = productDetails[0] || "Unknown Product";
+        const productPrice = productDetails[1] || "Unknown Price";
+        //const productSize = productDetails[2] || "Size Selected";
         const quantity = item.querySelector('.quantity-input').value;
-        orderDetails += `${productName} (${productSize}) - ${productPrice} x${quantity}\n`;
+
+        const productSize = productDetails.length > 2 ? `(${productDetails[2]})` : "";
+        //const productName = item.querySelector('p').textContent.split(' - ')[0];
+        //const productPrice = item.querySelector('p').textContent.split(' - ')[1];
+       // const productSize = item.querySelector('p').textContent.split(' - ')[2];
+        //const quantity = item.querySelector('.quantity-input').value;
+        orderDetails += `(${productName}) - (${productPrice}) - (x${quantity}\n)`;
     });
 
     // Send the order details to WhatsApp

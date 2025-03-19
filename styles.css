@@ -423,8 +423,9 @@ header {
     border-radius: 4px;
 }
 
+/*Order Form*/
 .send-order-btn {
-    background-color: #4CAF50;
+    background-color: black;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -433,11 +434,11 @@ header {
 }
 
 .send-order-btn:hover {
-    background-color: #45a049;
+    background-color: grey;
 }
 
 .close {
-    color: #aaa;
+    color: black;
     font-size: 28px;
     font-weight: bold;
     position: absolute;
@@ -450,87 +451,6 @@ header {
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
-/*Order Section*/
-
-.orderSection {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    background-size: cover;
-    padding: 50px 0;
-}
-
-.orderSection h1 {
-    font-size: 3rem;
-    font-weight: 300;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-#orderForm {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 50px;
-    width: 75%;
-    margin: 0 auto;
-    padding: 20px;
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    font-family: "Jost", sans-serif;
-}
-
-#orderForm input, textarea {
-    width: 90%;
-    height: 60px;
-    padding: 10px;
-    font-size: 1.2rem;
-    border: none;
-    border-bottom: 2px solid black;
-    background-color: none;
-}
-
-input:focus,
-textarea:focus {
-    outline: none;
-}
-
-input::placeholder,
-textarea::placeholder {
-    color: black;
-}
-
-textarea {
-    resize: none;
-    overflow: hidden;
-}
-
-#orderBtn {
-    background-color: black;
-    color: white;
-    font-size: 1.5rem;
-    padding: 10px;
-    border-radius: 3px;
-    width: 40%;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: all .35s ease;
-}
-
-#orderBtn:hover {
-    scale: 1.1;
-}
-
-.br1 {
-    border-radius: 50px 0 50px 0;
-}
-
-.br2 {
-    border-radius: 0 50px 0 50px;
 }
 
 footer {
