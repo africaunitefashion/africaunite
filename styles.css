@@ -319,6 +319,7 @@ header {
     .navbar .toggle_btn {
         display: none; 
     }
+    
 }
 @media(max-width: 992px) {
     .navbar .links,
@@ -343,6 +344,9 @@ header {
         height: 150px; 
         max-width: 90%; 
         display:block;
+    }
+    .cart-btn{
+        margin-right: 40px;
     }
 }
 
